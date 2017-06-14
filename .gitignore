@@ -17,3 +17,6 @@
 .glide/
 
 # End of https://www.gitignore.io/api/go
+
+# the main binaru
+/pfx
