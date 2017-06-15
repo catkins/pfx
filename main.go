@@ -10,13 +10,12 @@ import (
 )
 
 func main() {
-	var prefix string
-
-	flag.StringVar(&prefix, "P", "", "string to prefix output with")
 	flag.Parse()
 
+	prefix := flag.Arg(0)
+
 	if prefix == "" {
-		fmt.Fprintln(os.Stderr, "--prefix PREFIX required")
+		fmt.Fprintln(os.Stderr, "usage: pfx <PREFIX>")
 		os.Exit(2)
 	}
 	scanner := bufio.NewScanner(os.Stdin)

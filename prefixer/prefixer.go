@@ -76,6 +76,7 @@ func templateFunctions() template.FuncMap {
 		"hiwhite":   color.HiWhiteString}
 }
 
-func shortTime(t time.Time) (string, error) {
-	return fmt.Sprintf("%02d:%02d:%02d", t.Hour(), t.Minute(), t.Second()), nil
+func shortTime() string {
+	t := time.Now()
+	return fmt.Sprintf("%02d:%02d:%02d", t.Hour(), t.Minute(), t.Second())
 }
